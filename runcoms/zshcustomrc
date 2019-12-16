@@ -1,0 +1,33 @@
+# For adding bash alies
+if [[ -f ~/.bash_aliases ]]; then
+  source ~/.bash_aliases
+fi
+
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+
+# Use vim as default $VISUAL (for execute command line in editor for example)
+export VISUAL=vim
+export EDITOR=vim
+
+# For GoLang
+export GOPATH=$HOME/go-workspace
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# For cargo
+export PATH=$PATH:$HOME/.cargo/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f --color=never'
+
+unalias lt
+
+export TERM=xterm-256color
+
+export LC_ALL='en_US.UTF-8'
+
+# For broot
+source /Users/joenguyen/Library/Preferences/org.dystroy.broot/launcher/bash/br
