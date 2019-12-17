@@ -1,0 +1,15 @@
+# Use vim as default $VISUAL (for execute command line in editor for example)
+export VISUAL=vim
+export EDITOR=vim
+
+# For GoLang
+export GOPATH=$HOME/go-workspace
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# Fzf
+export FZF_DEFAULT_COMMAND='fd --type f --color=never'
+
+export TERM=xterm-256color
+
+export LC_ALL='en_US.UTF-8'

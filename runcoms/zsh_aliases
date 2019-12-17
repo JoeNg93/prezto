@@ -1,0 +1,22 @@
+# Alias for zsh
+alias cdData='cd ~/Data';
+alias lsData='cd ~/Data; ls'; # Combine 2 commands
+alias showFiles='defaults write com.apple.finder AppShowAllFiles YES; killall Finder';
+alias hideFiles='defaults write com.apple.finder AppShowAllFiles NO; killall Finder';
+alias c='clear'
+alias t='touch'
+alias m='mkdir -p'
+alias v='vim';
+
+# alias fzfp='fzf --preview="pygmentize -O style=monokai -g {}" --preview-window=right:70%:wrap'
+alias fzfp='fzf --preview="cat {}" --preview-window=right:70%:wrap'
+alias pcat='pygmentize -O style=monokai -g'
+alias gsync='gfa && gr upstream/master && gp origin master'
+
+alias currentDate='date +%Y%m%dT%H%M'
+
+alias activateVenv='source venv/bin/activate'
+
+alias itree='tree -I $(([[ -f .gitignore ]] && cat .gitignore | grep -E -v "^#|^\s*$" | sed -E "s/\/$//g" | tr "\n" "|" | sed -E "s/.$//") || echo ".")'
+
+unalias lt

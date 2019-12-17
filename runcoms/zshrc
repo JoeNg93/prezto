@@ -1,12 +1,10 @@
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+[[ -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]] && source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Source custom config
-if [[ -e "${HOME}/.zshcustomrc" ]]; then
-  source "${HOME}/.zshcustomrc"
-fi
+[[ -f "${HOME}/.zsh_customrc" ]] && source "${HOME}/.zsh_customrc"
+
+# Configs below are added automatically by commands/processes
 
 ###-begin-pm2-completion-###
 ### credits to npm for the completion file model
@@ -59,3 +57,9 @@ fi
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/dung.nguyen/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+export PATH="$HOME/.cargo/bin:$PATH"
