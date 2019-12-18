@@ -60,6 +60,6 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /Users/dung.nguyen/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source /Users/$(whoami)/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH="$HOME/.cargo/bin:$PATH"

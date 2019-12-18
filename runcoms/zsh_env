@@ -13,3 +13,5 @@ export FZF_DEFAULT_COMMAND='fd --type f --color=never'
 export TERM=xterm-256color
 
 export LC_ALL='en_US.UTF-8'
+
+export PAGER=less
