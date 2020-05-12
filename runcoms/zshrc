@@ -63,3 +63,7 @@ fi
 source /Users/$(whoami)/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# For autojump CLI
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && source $(brew --prefix)/etc/profile.d/autojump.sh
+
