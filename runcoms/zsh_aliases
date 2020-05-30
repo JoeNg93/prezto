@@ -9,7 +9,7 @@ alias m='mkdir -p'
 alias v='vim';
 
 # alias fzfp='fzf --preview="pygmentize -O style=monokai -g {}" --preview-window=right:70%:wrap'
-alias fzfp='fzf --preview="cat {}" --preview-window=right:70%:wrap'
+alias fzfp='fzf --preview="bat {} --color=always" --preview-window=right:70%:wrap'
 alias pcat='pygmentize -O style=monokai -g'
 alias gsync='gfa && gr upstream/master && gp origin master'
 
