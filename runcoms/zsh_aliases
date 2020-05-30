@@ -8,9 +8,11 @@ alias t='touch'
 alias m='mkdir -p'
 alias v='vim';
 
-# alias fzfp='fzf --preview="pygmentize -O style=monokai -g {}" --preview-window=right:70%:wrap'
 alias fzfp='fzf --preview="bat {} --color=always" --preview-window=right:70%:wrap'
-alias pcat='pygmentize -O style=monokai -g'
+gwdd() {
+  preview="git diff $@ --no-ext-diff --color=always {}"
+  git diff $@ --name-only | fzf --preview=$preview --preview-window=right:70%:wrap
+}
 alias gsync='gfa && gr upstream/master && gp origin master'
 
 alias currentDate='date +%Y%m%dT%H%M'
