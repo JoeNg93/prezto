@@ -11,7 +11,7 @@ alias v='vim';
 alias fzfp='fzf --preview="bat {} --color=always" --preview-window=right:70%:wrap'
 gwdd() {
   preview="git diff $@ --no-ext-diff --color=always {}"
-  git diff $@ --name-only | fzf --preview=$preview --preview-window=right:70%:wrap
+  git diff $@ --name-only | fzf -m --preview=$preview --preview-window=right:70%:wrap
 }
 alias gsync='gfa && gr upstream/master && gp origin master'
 
