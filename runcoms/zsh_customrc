@@ -10,3 +10,7 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 
 source "${HOME}/.zsh-theme-gruvbox-material-dark"
+
+# Faster changing between Vim mode when pressing "ESC"
+export KEYTIMEOUT=1
+
