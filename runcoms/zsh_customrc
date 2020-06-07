@@ -11,6 +11,6 @@ bindkey '^xe' edit-command-line
 
 source "${HOME}/.zsh-theme-gruvbox-material-dark"
 
-# Faster changing between Vim mode when pressing "ESC"
-export KEYTIMEOUT=1
+# Faster changing between Vim mode when pressing "ESC" (25ms)
+export KEYTIMEOUT=2.5
 
