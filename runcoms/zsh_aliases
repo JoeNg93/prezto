@@ -6,7 +6,8 @@ alias hideFiles='defaults write com.apple.finder AppShowAllFiles NO; killall Fin
 alias c='clear'
 alias t='touch'
 alias m='mkdir -p'
-alias v='vim';
+alias v='nvim'
+alias vim='nvim'
 
 alias fzfp='fzf --preview="bat {} --color=always" --preview-window=right:70%:wrap'
 gwdd() {
