@@ -22,4 +22,6 @@ alias activateVenv='source venv/bin/activate'
 
 alias itree='tree -I $(([[ -f .gitignore ]] && cat .gitignore | grep -E -v "^#|^\s*$" | sed -E "s/\/$//g" | tr "\n" "|" | sed -E "s/.$//") || echo ".")'
 
+alias fnf='fnf --search-engine fd'
+
 unalias lt
